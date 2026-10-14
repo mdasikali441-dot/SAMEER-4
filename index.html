@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMEER KHAN [2014] - Official Community Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        body {
+            background-color: #030712;
+            background-image: radial-gradient(circle at 50% 30%, #1e293b 0%, #030712 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        .phone-mockup {
+            width: 100%;
+            max-width: 430px;
+            background: #0b0f19;
+            border-radius: 40px;
+            overflow: hidden;
+            border: 4px solid #1f2937;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), 0 0 20px rgba(212, 175, 55, 0.15);
+            margin: 15px auto;
+            position: relative;
+        }
+
+        /* Top Bar Header */
+        .top-header {
+            background: linear-gradient(180deg, #d4af37 0%, #aa771c 100%);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #000;
+            border-bottom: 2px solid #e5c158;
+        }
+
+        .top-header .brand-title {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #0f172a;
+            text-transform: uppercase;
+        }
+
+        .top-header .logo-badge {
+            background: #0f172a;
+            color: #d4af37;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 13px;
+            border: 1px solid #d4af37;
+        }
+
+        /* Hero Sub Header */
+        .hero-subtitle {
+            text-align: center;
+            padding: 12px 10px 5px 10px;
+            background: #0b0f19;
+        }
+
+        .hero-subtitle h2 {
+            font-size: 14px;
+            color: #d1d5db;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Profile Banner Image Area */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, #0b0f19 20%, transparent 100%);
+        }
+
+        /* Content Body Area */
+        .content-body {
+            padding: 10px 18px 25px 18px;
+            text-align: center;
+            margin-top: -15px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .tagline-text {
+            font-size: 15px;
+            color: #f3f4f6;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .sports-icons-bar {
+            font-size: 13px;
+            color: #9ca3af;
+            margin-bottom: 16px;
+        }
+
+        /* Main Telegram CTA Button */
+        .cta-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 700;
+            border: 1px solid #38bdf8;
+            box-shadow: 0 4px 18px rgba(2, 132, 199, 0.4);
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        /* Yellow Alert Banner */
+        .yellow-card {
+            background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+            color: #0f172a;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 10px rgba(234, 179, 8, 0.2);
+        }
+
+        /* List Feature Cards */
+        .feature-card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 10px;
+            padding: 12px 16px;
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e5e7eb;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .feature-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-item i {
+            color: #22c55e;
+            font-size: 16px;
+        }
+
+        /* Green Alert Banner */
+        .green-card {
+            background: #16a34a;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        /* Footer Section */
+        .footer-bar {
+            margin-top: 20px;
+            padding-top: 12px;
+            border-top: 1px solid #1f2937;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #6b7280;
+        }
+
+        .verified-status {
+            color: #22c55e;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-mockup">
+        <!-- Golden Header -->
+        <div class="top-header">
+            <div class="brand-title">SAMEER KHAN [2014]</div>
+            <div class="logo-badge">SK [2014]</div>
+        </div>
+
+        <!-- Sub Title -->
+        <div class="hero-subtitle">
+            <h2>THE OFFICIAL COMMUNITY HUB<br>⚽ FOR SPORTS INSIGHTS 🏏</h2>
+        </div>
+
+        <!-- Person Image Area -->
+        <div class="banner-container">
+            <img src="profile-pic.jpg" alt="SAMEER KHAN">
+            <div class="banner-overlay"></div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-body">
+            <div class="tagline-text">প্রতিদিনের খেলার এক্সক্লুসিভ আপডেট এক জায়গায় 👇</div>
+            <div class="sports-icons-bar">⚽ Soccer | 🏏 Cricket | 🏀 Basketball | 🎾 Tennis</div>
+
+            <!-- Join Button 1 -->
+            <a href="https://t.me/+drI5nQ9oa-41ZmFl" target="_blank" class="cta-button">
+                JOIN MY PREMIUM COMMUNITY <i class="fa-solid fa-paper-plane"></i>
+            </a>
+
+            <!-- Yellow Notice -->
+            <div class="yellow-card">
+                🏆 সেরা কন্টেন্ট ও আপডেটের জন্য একদম সঠিক জায়গা
+            </div>
+
+            <!-- Features 1 -->
+            <div class="feature-card">
+                <div class="feature-item"><i class="fa-solid fa-square-check"></i> Exclusive Predictions & Tips</div>
+                <div class="feature-item"><i class="fa-solid fa-square-check"></i> Match Analysis & Strategies</div>
+                <div class="feature-item"><i class="fa-solid fa-square-check"></i> Sameer Khan's Direct Insights</div>
+            </div>
+
+            <!-- Green Notice -->
+            <div class="green-card">
+                🔒 সদস্য হতে নিচে দেখুন
+            </div>
+
+            <!-- Features 2 -->
+            <div class="feature-card">
+                <div class="feature-item"><i class="fa-solid fa-square-check"></i> 🚀 এক্সক্লুসিভ আপডেট মিস করবেন না</div>
+                <div class="feature-item"><i class="fa-solid fa-square-check"></i> 👥 হাজারো সফল ভক্তের সাথে যুক্ত হন</div>
+                <div class="feature-item"><i class="fa-solid fa-square-check"></i> 🔔 নিয়মিত আপডেট পেতে ফলো করুন</div>
+            </div>
+
+            <!-- Join Button 2 -->
+            <a href="https://t.me/+drI5nQ9oa-41ZmFl" target="_blank" class="cta-button">
+                👉 আরও জানুন (আরও কন্টেন্ট)
+            </a>
+
+            <!-- Footer -->
+            <div class="footer-bar">
+                <span>Managed by SAMEER KHAN Team | [2014]</span>
+                <span class="verified-status">
+                    <i class="fa-solid fa-circle-check"></i> Verified Secure access
+                </span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
